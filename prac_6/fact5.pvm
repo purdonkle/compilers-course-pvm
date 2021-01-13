@@ -1,0 +1,38 @@
+ASSEM
+BEGIN
+        DSP    3   ; arg is v0, nFact is v1, i is v2
+    LDC        1
+        STL    arg     ; arg = 1;
+WHILE1: LDL    arg
+        LDC    20      ; // max = 20, constant
+       CLE            ; while (arg <= max) {
+        BZE    EXIT1
+        LDC    1
+                      STL       nFact   ;   nFact = 1;
+        LDL    arg
+        STL    i       ;   i = arg;
+WHILE2: LDL    i
+        LDC    0
+        CGT            ;   while (i > 0) {
+        BZE EXIT2
+        LDL                nFact
+        LDL    i
+        MUL
+        STL    nFact   ;     nFact = nFact * i;
+        LDL    i
+        LDC    1
+        SUB
+        STL    i       ;     i = i = 1;
+        BRN    WHILE2  ;   }
+EXIT2:  LDL    0
+        PRNI           ;   write(arg);
+        PRNS   "! = "       ;   write("! = ");
+        LDL    nFact
+        PRNI           ;   write(nFact);
+        PRNL           ;   writeLine();
+        LDA    arg
+        INC            ;   arg++;
+        BRN WHILE1  ; }
+EXIT1:
+EXIT3:  HALT
+END.

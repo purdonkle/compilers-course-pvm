@@ -1,0 +1,10 @@
+int apple [4];
+void cpm ();
+void do_it_right ();
+char  an_extremely_long_identifier ( ) ;
+char  fortran [3][5];
+char goMadWithDelight;
+int ibm[1981], withThePC, the_way;
+char Modula_2;
+int f0(char a0, int b0, char c[]);
+void f1(char a[], int b[50]);

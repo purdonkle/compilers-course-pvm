@@ -1,0 +1,11 @@
+                         ; not a good way to comment PVM code
+                         ;
+   0   DSP      2        ; reserve 2 variables - X is var 0, Y is var 1
+   2   LDA      0        ; push address of X
+   4   LDC      -1       ; push constant -1
+   6   STO               ;        X := -1
+   7   LDA      1        ; push address of Y
+   9   LDA      0        ; push address of X
+  11   LDV               ; dereference - value of X now on top of stack
+  12   STO               ;        Y := X
+  13   HALT

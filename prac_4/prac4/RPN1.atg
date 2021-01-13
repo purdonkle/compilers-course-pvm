@@ -1,0 +1,20 @@
+COMPILER RPN1
+/* Attempt 1 to write a grammar for RPN expressions
+   P.D. Terry, Rhodes University, 2016 */
+
+CHARACTERS
+  digit       = "0123456789" .
+
+TOKENS
+  number      = digit { digit } .
+
+IGNORE CHR(0) .. CHR(31)
+
+PRODUCTIONS
+  RPN1    =   RPN1 RPN1 BinOp
+            | RPN1 UnaryOp
+            | number .
+  BinOp   = "+" | "-" | "*" | "/" .
+  UnaryOp = "-" | "sqrt" .
+
+END RPN1.

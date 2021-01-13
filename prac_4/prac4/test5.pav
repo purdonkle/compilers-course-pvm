@@ -1,0 +1,13 @@
+  void Main () {
+  // (not supposed to do anything useful!)
+  // be careful -- is this valid syntax 
+    int i = 1, k = 0;
+    break;
+    while (i > 1) {
+      k = k * - 4;
+    }
+    if (k) else y;
+    if (k = 4) y = 12 else y = 14;
+    { /*nothing */ }
+    if (i > 4) int z;
+  } // Main

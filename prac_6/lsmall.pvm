@@ -1,0 +1,59 @@
+ASSEM
+BEGIN
+                             ; comments are allowed on lines starting with ;
+                             ; program to find the smallest and largest of a stream of integers
+                             ; P.D. Terry, Rhodes University, 2003
+        DSP   3              ;  A is at 0, Largest at 1, Smallest at 2
+        PRNS  "Supply list of numbers terminated with 0 "
+        LDA   0
+        INPI                 ;  read A
+        LDA   2
+        LDA   0
+        LDV
+        STO                  ;  SMALLEST := A
+        LDA   1
+        LDA   0
+        LDV
+        STO                  ;  LARGEST := A
+LOOP:
+        LDA   0
+        LDV
+        LDC   0
+        CNE
+        BZE   EXIT           ;  while A <> 0
+        LDA   0
+        LDV
+        LDA   1
+        LDV
+        CGT
+        BZE   L1             ;    if A > LARGEST
+        LDA   1
+        LDA   0
+        LDV
+        STO                  ;      LARGEST := A
+L1:     LDA   0
+        LDV
+        LDA   2
+        LDV
+        CLT
+        BZE   L2             ;    if A < SMALLEST
+        LDA   2
+        LDA   0
+        LDV
+        STO                  ;      SMALLEST := A
+L2:     LDA   0
+        INPI                 ;    read A
+        BRN   LOOP
+EXIT:
+        PRNL                 ; output answers
+        LDA   2
+        LDV
+        PRNI                 ;  print SMALLEST
+        PRNS  " is the smallest and "
+        LDA   1
+        LDV
+        PRNI                 ;  print LARGEST
+        PRNS  " is the largest"
+        PRNL
+        HALT
+END.

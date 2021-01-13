@@ -1,0 +1,22 @@
+
+   1 abstract class 12, 45
+   2 abstraction, data 165
+   3 advantages of Java and Modula-2 1-99, 100-500, Appendix 4
+   4 aegrotat examinations -- see unethical doctors
+   5 aggregate pass, chances of 0
+   6 class attendance, intolerable 15, 745
+   7 class members 31
+   8 deadlines, compiler course -- see sunrise
+   9 horrible design (C and C++) 34, 45, 56-80
+  10 lectures, missed 1, 3, 5-9, 12, 14-17, 21-25, 28
+  11 loss of DP certificate 2012
+  12 no chance of supp 2012
+  13 prac tests 10, 25, 27, 30
+  14 probable exclusion from Rhodes 2013
+  15 recursion -- see recursion
+  16 senility, onset of 21-24, 105
+  17 subminimum 40
+  18 supplementary exams (first courses only) 45 - 49
+  19 wasted years 2010 - 2012
+
+0 errors detected

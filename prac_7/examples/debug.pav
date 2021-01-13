@@ -1,0 +1,8 @@
+$D+ // Turn on debugging mode
+$C- // list code
+void Main () {
+  int i;
+  int[] List = new int[10];
+  List[1] = 5;
+  write(List[1]);
+}

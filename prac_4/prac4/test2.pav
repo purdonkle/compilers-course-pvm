@@ -1,0 +1,6 @@
+  void Main () {
+  // (not supposed to do anything useful!)
+    int i, just_kidding;
+    bool too______good_______toBeTrue;
+    for b = true downto false write(b);
+  } // Main

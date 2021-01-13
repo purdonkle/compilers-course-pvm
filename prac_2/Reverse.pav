@@ -1,0 +1,17 @@
+  void Main () {
+  // Read zero-terminated list of numbers & write it backwards
+  // P.D. Terry, Rhodes University, 2015
+    const max = 10;
+    int[] list = new int[max];
+    int i = 0, n;
+    read(n);
+    while ((n != 0) && (i < max)) {  // input loop
+      list[i] = n;
+      i++;
+      read(n);
+    }
+    while (i > 0) {                  // output loop
+      i--;
+      write(list[i]);
+    }
+  } // Main

@@ -1,0 +1,16 @@
+                         ; not a good way to comment PVM code
+                         ;
+   0   DSP    2          ; X is variable 0, Y is variable 1
+   2   LDA    0          ; push address of X
+   4   INPI              ; read and store at address popped from stack
+   5   LDA    1          ; push address of Y
+   7   INPI              ; read and store at address popped from stack
+   8   LDA    0          ; push address of X
+  10   LDV               ; dereference - value of X now on top of stack
+  11   LDC    4          ; push constant 4 onto stack
+  13   LDA    1          ; push address of Y
+  15   LDV               ; dereference - value of Y now on top of stack
+  16   DIV               ; pop Y and 4 - push back 4/Y
+  17   ADD               ; pop 4/Y and X - push back X+4/Y
+  18   PRNI              ; pop value of X+4/Y and print it
+  19   HALT

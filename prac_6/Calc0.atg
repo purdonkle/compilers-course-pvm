@@ -1,0 +1,20 @@
+COMPILER Calc  $CN
+/* Simple four function calculator
+   P.D. Terry, Rhodes University, 2015 */
+
+CHARACTERS
+  digit      = "0123456789" .
+  letter     = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .
+
+TOKENS
+  Number     = digit { digit } [ "." { digit } ] .
+  Variable   = letter .
+
+IGNORE CHR(0) .. CHR(31)
+
+PRODUCTIONS
+  Calc       = { Variable "=" Expression } EOF .
+  Expression = Term { "+" Term  |  "-" Term } .
+  Term       = Factor { "*" Factor |  "/" Factor } .
+  Factor     = Number | Variable | "(" Expression ")" .
+END Calc.

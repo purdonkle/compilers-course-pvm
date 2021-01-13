@@ -1,0 +1,17 @@
+  void Main () {
+  // Demonstrate syntax for various loops
+  // (not supposed to do anything useful!)
+    int i = 1, k = 0;
+    while (i < 10) {
+      do {
+        k = k + 1;
+        if (k > 5) break;
+      } while (i < k);
+      i = i + 1;
+    }
+    do
+      read(k);    //  note this should give an error
+      write(i, i * k);
+    while (k != 100);
+    for i = 1 to 11 write(i);
+  } // Main

@@ -1,0 +1,13 @@
+
+   1 void Main () { $C+
+   2 // readln.pav
+   3 // Simple readLine and writeLine
+   4   int x;
+   5   readLine(x);
+****           ^ "}" expected
+   6   writeLine(x);
+   7   read(x);  readLine();
+   8   write(x); writeLine();
+   9 }
+
+1 errors detected

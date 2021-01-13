@@ -1,0 +1,6 @@
+; Demonstrate division by zero
+  LDC  100
+  LDC  0
+  DIV
+  PRNI
+  HALT

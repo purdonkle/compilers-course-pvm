@@ -1,0 +1,14 @@
+0   DSP     	3
+2   LDA_0
+3   LDC_0
+4   STO
+5   LDA_1
+6   LDC_1
+7   STO
+8   LDL_0
+9   LDL_1
+10  ADD
+11  STL 	2
+13  LDL 	2
+15  PRNI    
+16  HALT

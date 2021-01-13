@@ -1,0 +1,9 @@
+A = 4 + 5.6;
+B = A * 7;
+C = 1;
+D = 2;
+E = (C + D) * 3;
+print E;
+print C;
+print max(C, E);
+print max(E, C);

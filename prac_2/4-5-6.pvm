@@ -1,0 +1,24 @@
+                         ; much better way to comment PVM code
+                         ;
+   0   DSP   2           ;  X is variable 0, Total is variable 1
+   2   LDA   1
+   4   LDC   0
+   6   STO               ;  Total := 0
+   7   LDA   0           ;  REPEAT
+   9   INPI              ;    Read(X)
+  10   LDA   1
+  12   LDA   0
+  14   LDV
+  15   LDA   1
+  17   LDV
+  18   ADD
+  19   STO               ;    Total := X + Total
+  20   LDA   0
+  22   LDV
+  23   BZE   27          ;  exit when X = 0
+  25   BRN   7           ;  otherwise repeat the loop
+  27   PRNS  "Total is"
+  29   LDA   1
+  31   LDV
+  32   PRNI              ;  Write(Total)
+  33   HALT

@@ -1,0 +1,59 @@
+                          ; Adam Purdon g18p8803
+                          ; 
+   0   DSP      3	  ; List is variable 0, i is variable 1, n is variable 2
+   2   LDA      0	  
+   4   LDC      10
+   6   ANEW		  
+   7   STO		  ; list [] := new list [10]
+   8   LDA      1
+  10   LDC      0
+  12   STO		  ; i := 0
+  13   LDA      2
+  15   INPI		  ; Read(n)
+  16   LDA      2	  ; REPEAT	  	  
+  18   LDV		  
+  19   LDC      0 
+  21   CNE		  ; check if n!=0
+  22   LDA      1	  
+  24   LDV
+  25   LDC      10
+  27   CLT		  ; check if i<10		  
+  28   AND		  
+  29   BZE      56	  ; UNTIL n=0 AND i>=10
+  31   LDA      0	  
+  33   LDV
+  34   LDA      1
+  36   LDV
+  37   LDXA
+  38   LDA      2
+  40   LDV
+  41   STO		  ; list [i] = n
+  42   LDA      1
+  44   LDA      1
+  46   LDV
+  47   LDC      1
+  49   ADD
+  50   STO		  ; i++
+  51   LDA      2
+  53   INPI		  ; Read(n)
+  54   BRN      16	  ; repeat the loop
+  56   LDA      1	  ; REPEAT
+  58   LDV
+  59   LDC      0
+  61   CGT		  ; check if i>0
+  62   BZE      84	  ; UNTIL i=0
+  64   LDA      1
+  66   LDA      1
+  68   LDV
+  69   LDC      1
+  71   SUB
+  72   STO		  ; i--
+  73   LDA      0
+  75   LDV
+  76   LDA      1
+  78   LDV
+  79   LDXA
+  80   LDV
+  81   PRNI		  ; Write(list[i])
+  82   BRN      56	  ; repeat the loop
+  84   HALT

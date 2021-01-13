@@ -1,0 +1,9 @@
+$C+
+void main() {
+// Test object properties for an array
+// array.pav
+
+  char[] list1 = new char[20];
+  list1[5] = 'a';
+  write(list1[5]);
+} // main

@@ -1,0 +1,16 @@
+  void Main() {
+  // Demonstrate various statements
+    const too_Much = 55;
+    int mark__1 = 5, mark__2 = 10, mark__3 = 20;
+    age = 0;
+    while (age < 180) {
+      age = age + 1;
+      write("Happy birthday ");
+      if (age == 75) {
+        write("That's quite enough for one life!");
+        break;
+      }
+      write("Have another good year\n");
+    }
+  } // Main
+

@@ -1,0 +1,9 @@
+void main () {
+  int i = 0;
+  if (i = 0) then i := 11;
+  if (i > 10) writeLine("greater than 10");
+  writeLine("Thomas");
+  writeLine("hello");
+  write("hello");
+  write("hello");
+}

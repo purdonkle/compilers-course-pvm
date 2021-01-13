@@ -1,0 +1,3 @@
+int an_id76en (int an_iden), an_iden ();
+void asdf;
+char asdf [234] [234];

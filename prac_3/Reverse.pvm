@@ -1,0 +1,59 @@
+                          ; try adding high level comments
+                          ; and for a start include your names
+   0   DSP      3
+   2   LDA      0
+   4   LDC      10
+   6   ANEW
+   7   STO
+   8   LDA      1
+  10   LDC      0
+  12   STO
+  13   LDA      2
+  15   INPI
+  16   LDA      2
+  18   LDV
+  19   LDC      0
+  21   CNE
+  22   LDA      1
+  24   LDV
+  25   LDC      10
+  27   CLT
+  28   AND
+  29   BZE      56
+  31   LDA      0
+  33   LDV
+  34   LDA      1
+  36   LDV
+  37   LDXA
+  38   LDA      2
+  40   LDV
+  41   STO
+  42   LDA      1
+  44   LDA      1
+  46   LDV
+  47   LDC      1
+  49   ADD
+  50   STO
+  51   LDA      2
+  53   INPI
+  54   BRN      16
+  56   LDA      1
+  58   LDV
+  59   LDC      0
+  61   CGT
+  62   BZE      84
+  64   LDA      1
+  66   LDA      1
+  68   LDV
+  69   LDC      1
+  71   SUB
+  72   STO
+  73   LDA      0
+  75   LDV
+  76   LDA      1
+  78   LDV
+  79   LDXA
+  80   LDV
+  81   PRNI
+  82   BRN      56
+  84   HALT

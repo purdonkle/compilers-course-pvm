@@ -1,0 +1,38 @@
+ASSEM
+BEGIN
+;  Simple truth table for OR and AND
+        LDC 0
+        LDC 0
+        OR
+        PRNB
+        LDC 1
+        LDC 0
+        OR
+        PRNB
+        LDC 0
+        LDC 1
+        OR
+        PRNB
+        LDC 1
+        LDC 1
+        OR
+        PRNB
+        PRNL
+        LDC 0
+        LDC 0
+        AND
+        PRNB
+        LDC 1
+        LDC 0
+        AND
+        PRNB
+        LDC 0
+        LDC 1
+        AND
+        PRNB
+        LDC 1
+        LDC 1
+        AND
+        PRNB
+        HALT
+END.

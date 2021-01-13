@@ -1,0 +1,18 @@
+void main() {
+// Read a piece of text terminated with a period and write it backwards in UPPER CASE.
+// P.D. Terry, Rhodes University, 2017
+
+  const
+    limit = 256;                      // demonstration upper limit on sentence length
+  char[]
+    sentence = new char[limit];       // the number of times each appears
+  int leng = 0;                       // read all characters
+  repeat
+    read(sentence[leng]); leng++;
+  until (sentence[leng - 1] == '.');  // terminate input with a full stop
+  while (leng > 0) {                  // write characters in reverse order
+    leng--;
+    write(upper(sentence[leng]));
+  }
+
+} // main

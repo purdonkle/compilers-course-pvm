@@ -1,0 +1,5 @@
+  void Main () {
+  // (not supposed to do anything useful!)
+    a += 5;
+    b &= true;
+  } // Main

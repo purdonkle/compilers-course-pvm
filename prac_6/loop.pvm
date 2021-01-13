@@ -1,0 +1,22 @@
+ASSEM
+BEGIN
+                     ;  Source code for example in Fig. 11.4
+                     ;  This does nothing useful other than demonstrate how
+                     ;  forward references are handled
+        DSP   1
+        LDA   0
+        INPI
+WHILE:  LDA   0
+        LDV
+        LDC   0
+        CGT
+        BZE   EXIT
+        LDC   12
+        PRNI
+        BRN   EXIT
+        LDA   0
+        INPI
+        BRN   WHILE
+EXIT:   HALT
+END.
+

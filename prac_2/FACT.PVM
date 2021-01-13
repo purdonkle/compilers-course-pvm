@@ -1,0 +1,57 @@
+                        ; Adam Purdon
+                        ; g18p8803
+    0   DSP     4       ; limit is variable 0, n is variable 1, f is variable 2, i is variable 4
+    2   LDA     0
+    4   LDC     20      
+    6   STO             ; limit := 20
+    7   LDA     1
+    9   LDC     1       
+    11  STO		; n := 1
+    12  LDA     1       ; REPEAT
+    14  LDV     
+    15  LDA     0
+    17  LDV
+    18  CLE             ; check if n <= limit
+    19  BZE     84      ; UNTIL n > limit
+    21  LDA     2   
+    23  LDC     1       
+    25  STO             ; f := 1
+    26  LDA     3
+    28  LDA     1
+    30  LDV
+    31  STO             ; i := n
+    32  LDA     3       ; REPEAT
+    34  LDV 
+    35  LDC     0
+    37  CGT             ; check if i > 0
+    38  BZE     61      ; UNTIL i < 0
+    40  LDA     2     
+    42  LDA     2
+    44  LDV
+    45  LDA     3
+    47  LDV
+    48  MUL
+    49  STO             ; f := f * i
+    50  LDA     3
+    52  LDA     3
+    54  LDV
+    55  LDC     1
+    57  SUB 
+    58  STO             ; i := i - 1
+    59  BRN     32      ; repeat the loop fix after
+    61  LDA     1
+    63  LDV
+    64  PRNI            ; Write(n)
+    65  PRNS    "! = "
+    67  LDA     2
+    69  LDV     
+    70  PRNI            ; Write (f)
+    71  PRNS    "\n"    
+    73  LDA     1
+    75  LDA     1
+    77  LDV     
+    78  LDC     1
+    80  ADD
+    81  STO             ; n++
+    82  BRN     12      ; repeat the loop
+    84  HALT

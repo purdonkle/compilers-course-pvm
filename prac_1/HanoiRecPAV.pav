@@ -1,0 +1,30 @@
+// Parva recursive solution to the Tower of Hanoi problem
+// P.D. Terry, Rhodes University, 2016
+
+  int moves;   // for expediency - count the moves
+  bool display;
+
+  void Hanoi (int n, int a, int b, int c) {
+  // Move n disks from a to b using c as an intermediate peg
+    if (n > 0) {
+      Hanoi(n-1, a, c, b);
+      if (display) write("Move disk ", n, " from ", a, " to ", b, "\n");
+      moves = moves + 1;
+      Hanoi(n-1, c, b, a);
+     }
+  } // Hanoi;
+
+  void Main() {
+    int disks;
+    read("How many disks? ", disks);
+    int iter;
+    read("How many iterations ", iter);
+    display = iter == 1;
+    while (iter > 0) {
+      moves = 0;
+      Hanoi(disks, 1, 2, 3);
+      write(moves, " moves\n");
+      iter = iter - 1;
+    }
+  } // Main
+

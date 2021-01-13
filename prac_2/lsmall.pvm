@@ -1,0 +1,56 @@
+; comments are allowed on lines starting with ;
+; program to find the smallest and largest of a stream of integers
+;
+; much better way to comment PVM code
+;
+   0   DSP      3                A is at 0, Largest at 1, Smallest at 2
+   2   PRNS     'Supply list of numbers terminated with 0 '
+   4   LDA      0
+   6   INPI                      read A
+   7   LDA      2
+   9   LDA      0
+  11   LDV
+  12   STO                       SMALLEST := A
+  13   LDA      1
+  15   LDA      0
+  17   LDV
+  18   STO                       LARGEST := A
+  19   LDA      0
+  21   LDV
+  22   LDC      0
+  24   CNE
+  25   BZE      62               while A <> 0
+  27   LDA      0
+  29   LDV
+  30   LDA      1
+  32   LDV
+  33   CGT
+  34   BZE      42                 if A > LARGEST
+  36   LDA      1
+  38   LDA      0
+  40   LDV
+  41   STO                           LARGEST := A
+  42   LDA      0
+  44   LDV
+  45   LDA      2
+  47   LDV
+  48   CLT
+  49   BZE      57                 if A < SMALLEST
+  51   LDA      2
+  53   LDA      0
+  55   LDV
+  56   STO                           SMALLEST := A
+  57   LDA      0
+  59   INPI                        read A
+  60   BRN      19
+  62   PRNL                     output answers
+  63   LDA      2
+  65   LDV
+  66   PRNI                      print SMALLEST
+  67   PRNS     ' is the smallest and '
+  69   LDA      1
+  71   LDV
+  72   PRNI                      print LARGEST
+  73   PRNS     ' is the largest'
+  75   PRNL
+  76   HALT

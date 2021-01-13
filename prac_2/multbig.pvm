@@ -1,0 +1,34 @@
+; much better way to comment PVM code
+;
+; demonstrate multiplicative overflow
+;
+                        ; void main() {
+   0   DSP      2        ;   int i, prod; // var 0 is i; var 1 is prod
+   2   LDA      0
+   4   LDC      0
+   6   STO               ;   i = 0;
+   7   LDA      1
+   9   LDC      1
+  11   STO               ;   prod = 1;
+  12   LDA      0
+  14   LDV
+  15   LDC      5
+  17   CLT               ;   while (i < 5) {
+  18   BZE      44
+  20   LDA      1
+  22   LDA      1
+  24   LDV
+  25   LDC      1000
+  27   MUL
+  28   STO               ;     prod = prod * 1000;
+  29   LDA      1
+  31   LDV
+  32   PRNI              ;     write(prod);
+  33   LDA      0
+  35   LDA      0
+  37   LDV
+  38   LDC      1
+  40   ADD
+  41   STO               ;     i = i + 1;
+  42   BRN      12       ;   }
+  44   HALT              ; }

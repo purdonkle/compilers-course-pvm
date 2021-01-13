@@ -1,0 +1,8 @@
+ASSEM
+BEGIN
+        LDC  100
+        LDC  0
+        DIV       ;  Division by zero!
+        PRNI
+        HALT
+END.

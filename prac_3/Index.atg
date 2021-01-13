@@ -1,0 +1,19 @@
+COMPILER Index  $CN
+/*  Index identifier by Adam Purdon, g18p8803   */
+
+CHARACTERS
+  digit      = "0123456789" .
+  char   	 = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ+" .
+
+TOKENS
+  page 		 = digit { digit } .
+  word		 = char { char } [ "--" char { char } | "-" digit] .
+
+IGNORE CHR(0) .. CHR(31)
+
+PRODUCTIONS
+  Index      = { PageNumber } EOF .
+  PageNumber = Content { page { "," { word } page | "-" page } } .
+  Content 	 = word { word | "," word | "(" word ")"} .
+  
+END Index.

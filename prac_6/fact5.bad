@@ -1,0 +1,40 @@
+ASSEM
+BEGIN
+        DSP    3       ; n is v0, f is v1, i is v2
+        LDC    1
+        STL    n       ; n = 1;
+WHILE1: LDL    n
+        LDC    20      ; // max = 20, constant
+        CLE            ; while (n <= max) {
+        BZE    EXIT
+        LDC    1
+        STL    f       ;   f = 1;
+        LDL    n
+        STL    i       ;   i = n;
+WHILE2: LDL    i
+        LDC    0
+        CGT            ;   while (i > 0) {
+        BZE    EXIT2
+        LDL    f
+        LDL    i
+        MUL
+        STL    f       ;     f = f * i;
+        LDL    i
+        LDC    1
+        SUB
+        STL    i       ;     i = i = 1;
+        BR    WHILE2  ;   }
+EXIT2:  LDL    O
+        PRNI           ;   write(n);
+        PRNS   "! = "  ;   write("! = ");
+        LDL    f
+        PRNI           ;   write(f);
+        PRNS   "\n"    ;   write("\n") (or use PRNL)
+        LDL    n
+        LDC    1
+        ADD
+        STL    n       ;   n = n + 1;
+        BRN    WHILE1  ; }
+EXIT1:  HALT
+EXIT3:
+END.

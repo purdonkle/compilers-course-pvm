@@ -1,0 +1,39 @@
+						; Adam Purdon g18p8803
+						
+	0	DSP		3		; n is v0, f is v1, i is v2
+	2	LDC_1
+	3	STL_0			; n = 1
+	4	LDL_0
+	5	LDC		5		; max = 5, constant
+	7	CLE				; while (n <= max) {
+	8	BZE		48
+	10	LDC_1
+	11	STL_1			; f = 1
+	12	LDL_0
+	13	STL		2		; i = n
+	15	LDL		2
+	17	LDC_0
+	18	CGT				; while <i > 0) {
+	19	BZE		34
+	21	LDL_1
+	22	LDL		2
+	24	MUL
+	25	STL_1			; f = f * i
+	26	LDL		2
+	28	LDC_1
+	29	SUB
+	30	STL		2		; i = i - 1
+	32	BRN		15		; }
+	34	LDL_0
+	35	PRNI			; write(n)
+	36	PRNS	"! = "	; write("! = ")
+	38	LDL_1
+	39	PRNI			; write(f)
+	40	PRNS	"\n"	; write("\n")
+	42	LDL_0
+	43	LDC_1
+	44	ADD
+	45	STL_0			; n = n + 1
+	46	BRN		4		; }
+	48	HALT
+	

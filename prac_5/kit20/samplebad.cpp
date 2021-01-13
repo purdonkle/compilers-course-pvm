@@ -1,0 +1,13 @@
+void void int a[];
+int x [100.0];
+long x [100];
+int c()[100];
+int d() () ;
+int e[100]();
+int f[100](;
+int g[][100];
+int h[100][];
+int i][;
+int f0(int a[10], sint b[]);
+int f1(int ;);
+int f3(int a,);

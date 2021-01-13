@@ -1,0 +1,49 @@
+                       ; Read a sentence and write it in reverse in UPPER CASE
+                       ; P.D. Terry, Rhodes University, 2017
+                       ; char[] sentence is v0; leng is v1
+                       ; original opcode set
+
+   0   DSP       2     ;
+   2   LDA       0     ;
+   4   LDC       256   ;
+   6   ANEW            ;
+   7   STO             ;  sentence = new char[256];
+   8   LDA       1     ;
+  10   LDC       0     ;
+  12   STO             ;  leng = 0;
+  13   LDA       0     ;  repeat {
+  15   LDV             ;
+  16   LDA       1     ;
+  18   LDV             ;
+  19   LDXA            ;
+  20   INPC            ;    read(sentence[leng]);
+  21   LDA       1     ;
+  23   INC             ;    leng++;
+  24   LDA       0     ;  }
+  26   LDV             ;
+  27   LDA       1     ;
+  29   LDV             ;
+  30   LDC       1     ;
+  32   SUB             ;
+  33   LDXA            ;
+  34   LDV             ;
+  35   LDC       46    ;
+  37   CEQ             ;
+  38   BZE       13    ; until (sentence[leng-1] = '.');
+  40   LDA       1     ;
+  42   LDV             ;
+  43   LDC       0     ;
+  45   CGT             ; while (leng > 0) {
+  46   BZE       63    ;
+  48   LDA       1     ;
+  50   DEC             ;   leng--;
+  51   LDA       0     ;
+  53   LDV             ;
+  54   LDA       1     ;
+  56   LDV             ;
+  57   LDXA            ;
+  58   LDV             ;
+  59   CAP             ;
+  60   PRNC            ;   write(upper(sentence[leng]);
+  61   BRN       40    ; }
+  63   HALT            ; System.Exit()

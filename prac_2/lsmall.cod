@@ -1,0 +1,54 @@
+ASSEM
+BEGIN
+  {    0 } DSP      3
+  {    2 } PRNS     "Supply list of numbers terminated with 0 "
+  {    4 } LDA      0
+  {    6 } INPI    
+  {    7 } LDA      2
+  {    9 } LDA      0
+  {   11 } LDV     
+  {   12 } STO     
+  {   13 } LDA      1
+  {   15 } LDA      0
+  {   17 } LDV     
+  {   18 } STO     
+  {   19 } LDA      0
+  {   21 } LDV     
+  {   22 } LDC      0
+  {   24 } CNE     
+  {   25 } BZE      62
+  {   27 } LDA      0
+  {   29 } LDV     
+  {   30 } LDA      1
+  {   32 } LDV     
+  {   33 } CGT     
+  {   34 } BZE      42
+  {   36 } LDA      1
+  {   38 } LDA      0
+  {   40 } LDV     
+  {   41 } STO     
+  {   42 } LDA      0
+  {   44 } LDV     
+  {   45 } LDA      2
+  {   47 } LDV     
+  {   48 } CLT     
+  {   49 } BZE      57
+  {   51 } LDA      2
+  {   53 } LDA      0
+  {   55 } LDV     
+  {   56 } STO     
+  {   57 } LDA      0
+  {   59 } INPI    
+  {   60 } BRN      19
+  {   62 } PRNL    
+  {   63 } LDA      2
+  {   65 } LDV     
+  {   66 } PRNI    
+  {   67 } PRNS     " is the smallest and "
+  {   69 } LDA      1
+  {   71 } LDV     
+  {   72 } PRNI    
+  {   73 } PRNS     " is the largest"
+  {   75 } PRNL    
+  {   76 } HALT    
+END.

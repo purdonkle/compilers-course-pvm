@@ -1,0 +1,18 @@
+void main () {
+// Print a table of factorial numbers 1! ... 20!
+// Your names here!
+
+  const limit = 20;
+  int n = 1;
+  while (n <= limit) {
+    int f = 1;
+    int i = n;
+    while (i > 0) {
+      f = f * i;
+      i = i - 1;
+    }
+    write(n, "! = ", f, "\n");
+    n = n + 1;
+  }
+
+} // main

@@ -1,0 +1,20 @@
+// Print a table of Fibonacci numbers using (fast) iterative method
+// P.D. Terry,  Rhodes University, 2017
+
+  void Main() {
+    int
+      term   = 0,
+      first  = 0,
+      second = 1,
+      limit;
+
+    read("Supply upper limit ", limit);
+    write(term, "\t", first, "\n");
+    while (term < limit) {
+      term = term + 1;
+      write(term, "\t", second, "\n");
+      int next = first + second;
+      first  = second;
+      second = next;
+    } // while
+  } // Main

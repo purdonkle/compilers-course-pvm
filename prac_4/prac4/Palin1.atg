@@ -1,0 +1,5 @@
+COMPILER Palin1 $TF
+IGNORE CHR(0) .. CHR(31)
+PRODUCTIONS
+  Palin1 = "a" Palin1 "a" | "b" Palin1 "b" .
+END Palin1.
